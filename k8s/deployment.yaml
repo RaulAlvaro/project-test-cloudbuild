@@ -18,4 +18,4 @@ spec:
       - image: gcr.io/project-test-365415/project-test-cloudbuild:latest
         name: project-test-cloudbuild
         ports:
-        - containerPort: <container-port>
+        - containerPort: 8080
