@@ -5,7 +5,7 @@ metadata:
     run: project-test-cloudbuild
   name: project-test-cloudbuild
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       run: project-test-cloudbuild
@@ -15,7 +15,7 @@ spec:
         run: project-test-cloudbuild
     spec:
       containers:
-      - image: gcr.io/project-test-365415/project-test-cloudbuild:latest
-        name: project-test-cloudbuild
-        ports:
-        - containerPort: 8080
+        - image: gcr.io/project-test-365415/project-test-cloudbuild:latest
+          name: project-test-cloudbuild
+          ports:
+          - containerPort: 8080
