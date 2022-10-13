@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: project-test-cloudbuild
+  name: project-test-cloudbuild
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: project-test-cloudbuild
+  template:
+    metadata:
+      labels:
+        run: project-test-cloudbuild
+    spec:
+      containers:
+      - image: gcr.io/project-test-365415/project-test-cloudbuild:latest
+        name: project-test-cloudbuild
+        ports:
+        - containerPort: <container-port>
